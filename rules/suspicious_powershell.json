@@ -1,0 +1,23 @@
+{
+    "rule_id": "SL002",
+    "name": "Suspicious PowerShell Activity",
+    "description": "Detects selected indicators of potentially suspicious PowerShell execution.",
+    "severity": "MEDIUM",
+    "event_id": 1,
+    "field": "CommandLine",
+    "process_indicators": [
+        "powershell.exe",
+        "pwsh.exe"
+    ],
+    "patterns": [
+        "-enc",
+        "-encodedcommand",
+        "FromBase64String",
+        "Invoke-Expression"
+    ],
+    "mitre_attack": {
+        "technique_id": "T1059.001",
+        "technique_name": "PowerShell"
+    },
+    "investigation_guidance": "Review the full command line, parent process, user, and surrounding events. Encoded commands can be legitimate, so investigate the context before classifying activity as malicious."
+}

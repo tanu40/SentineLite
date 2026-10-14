@@ -1,0 +1,19 @@
+{
+    "rule_id": "SL001",
+    "name": "Suspicious System Discovery Command",
+    "description": "Detects selected commands commonly used to discover system information.",
+    "severity": "LOW",
+    "event_id": 1,
+    "field": "CommandLine",
+    "patterns": [
+        "\\bwhoami\\b",
+        "\\bipconfig\\b",
+        "\\bsysteminfo\\b",
+        "\\bhostname\\b"
+    ],
+    "mitre_attack": {
+        "technique_id": "T1082",
+        "technique_name": "System Information Discovery"
+    },
+    "investigation_guidance": "Review the command line, user, parent process, and surrounding activity. Determine whether the command is expected for the user's role."
+}
