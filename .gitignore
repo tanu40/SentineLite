@@ -1,0 +1,30 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Local logs and captured telemetry
+*.log
+transfer/
+
+# Generated reports
+reports/
+
+# Keep project documentation and screenshots
+!docs/
+!docs/screenshots/
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
