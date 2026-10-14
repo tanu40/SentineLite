@@ -1,0 +1,23 @@
+{
+    "project": "SentinelLite",
+    "generated_at": "2026-10-13T11:13:02.223675+05:30",
+    "total_alerts": 1,
+    "alerts": [
+        {
+            "rule_id": "SL002",
+            "rule_name": "Suspicious PowerShell Activity",
+            "severity": "MEDIUM",
+            "event_id": 1,
+            "timestamp": "2026-10-13T04:02:05.9944268Z",
+            "computer": "DESKTOP-HNLP1K1",
+            "process": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "parent_process": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "command_line": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -EncodedCommand RwBlAHQALQBEAGEAdABlAA==",
+            "matched_pattern": "-enc",
+            "reason": "Detects selected indicators of potentially suspicious PowerShell execution.",
+            "mitre_attack": "T1059.001",
+            "mitre_technique_name": "PowerShell",
+            "investigation_guidance": "Review the full command line, parent process, user, and surrounding events. Encoded commands can be legitimate, so investigate the context before classifying activity as malicious."
+        }
+    ]
+}
